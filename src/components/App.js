@@ -6,7 +6,7 @@ import UserContext from '../context/context.js';
 
 export default function App() {
     const [countryName, setCountryName] = useState("");
-    const [countryInfo, setCountryInfo] = useState({});
+    const [countryInfo, setCountryInfo] = useState([]);
     return(
         <>
         <GlobalStyle/>
