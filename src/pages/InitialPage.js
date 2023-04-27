@@ -5,17 +5,17 @@ import Container from "../components/Container";
 import { findCountry } from "../axios/axios";
 import { RotatingLines } from 'react-loader-spinner';
 import InfoCountries from "../components/InfoCountries.js";
-import { useNavigate } from "react-router-dom";
-
+import Swal from "sweetalert2";
+  
 export default function InitialPage(){
     const { countryName, setCountryName, countryInfo, setCountryInfo } = useContext(UserContext);
     const [isFoundCountry, setIsFoundCountry] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const navigate = useNavigate();
 
     async function searchForCountry(){
         setIsLoading(true);
+
         try{
             const infoFound = await findCountry(countryName);  
             setCountryInfo(infoFound.data);  
@@ -27,7 +27,12 @@ export default function InitialPage(){
         }catch(err){
             setIsLoading(false);
             setCountryName("");
-            alert("Sorry, couldn't find the country!");
+            Swal.fire({
+                title: 'Error!',
+                text: 'Could not found the country, please try again!',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              });
         }
     };
 
@@ -47,11 +52,9 @@ export default function InitialPage(){
                                 official={countries.name.official}
                                 capital={countries.capital}
                                 subregion={countries.subregion}
-                                lenguages={countries.lenguages}
                                 area={countries.area}
                                 flag={countries.flag}
                                 population={countries.population}
-                                maps={countries.maps.googleMaps}
                             />)
                         ))}
                         <ButtonBack onClick={()=>{setIsModalOpen(false)}}>
@@ -60,6 +63,7 @@ export default function InitialPage(){
                     </>
                     :
                     <>
+                    
                         <Top>
                             <TopText>
                                 Seach for a Country
@@ -101,7 +105,11 @@ const Top = styled.div`
 const TopText = styled.h1`
     font-size:50px;
     color:white;
-    font-weight:700;
+    font-weight:800;
+    text-shadow: 1px 1px 2px black;
+    @media (max-width: 600px){
+        font-size:35px;
+    }
 `;
 
 const SeachForm = styled.form`
@@ -119,11 +127,15 @@ const Input = styled.input`
     font-size:20px;
     border-style:none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    @media (max-width: 600px){
+        width:200px;
+        height:40px;
+    }
 `;
 
 const ButtonSeach = styled.button`
     width:180px;
-    height:65px;
+    height: 48px;
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
@@ -134,7 +146,6 @@ const ButtonSeach = styled.button`
     color: #36395A;
     cursor: pointer;
     display: inline-flex;
-    height: 48px;
     justify-content: center;
     line-height: 1;
     list-style: none;
@@ -163,6 +174,9 @@ const ButtonSeach = styled.button`
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
+@media (max-width: 600px){
+    width:150px;
+    }
 `;
 
 const ButtonBack = styled.button`
@@ -207,4 +221,7 @@ const ButtonBack = styled.button`
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
+@media (max-width: 600px){
+    width:150px;
+    }
 `
