@@ -29,7 +29,7 @@ export default function InitialPage(){
             setCountryName("");
             Swal.fire({
                 title: 'Error!',
-                text: 'Could not found the country, please try again!',
+                text: 'Could not find the country, please try again!',
                 icon: 'error',
                 confirmButtonText: 'OK'
               });
