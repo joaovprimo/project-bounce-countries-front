@@ -19,7 +19,6 @@ export default function InitialPage(){
         try{
             const infoFound = await findCountry(countryName);  
             setCountryInfo(infoFound.data);  
-            console.log(infoFound.data)
             setIsLoading(false); 
             setIsFoundCountry(true);
             setCountryName("");
