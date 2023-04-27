@@ -34,7 +34,7 @@ const BoxInfo = styled.div`
         margin-right:10px;
     }
     @media (max-width: 600px){
-        width:50%;
+        min-width:50%;
         padding:15px;
         h1{
             font-size:15px;

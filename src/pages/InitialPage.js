@@ -100,6 +100,9 @@ export default function InitialPage(){
 const Top = styled.div`
     margin-top:150px;
     margin-bottom:50px;
+    @media (max-width: 600px){
+        margin-top:200px;
+    }
 `;
 
 const TopText = styled.h1`
