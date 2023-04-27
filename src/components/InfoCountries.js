@@ -19,13 +19,14 @@ export default function InfoCountries({common, official, capital, subregion, are
 const BoxInfo = styled.div`
     box-sizing:border-box;
     min-width:60%;
+    min-height:50%;
     background-color:white;
     color:black;
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    justify-content:space-evenly;
     margin-top:50px;
-    padding:20px;
+    padding-left:20px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
     border-radius:3px;
     h1{
@@ -35,8 +36,9 @@ const BoxInfo = styled.div`
     }
     @media (max-width: 600px){
         width:90%;
-        padding:15px;
+        padding-left:15px;
         margin-top:100px;
+        min-height:40%;
         h1{
             font-size:15px;
             white-space: pre;
@@ -49,9 +51,7 @@ const Info = styled.div`
     display:flex;
     font-size:25px;
     box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
-    margin-bottom:5px;
     @media (max-width: 600px){
         font-size:15px;
-        
     }
 `;

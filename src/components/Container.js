@@ -21,4 +21,5 @@ align-items:center;
 opacity:0.8;
 font-family: "JetBrains Mono",monospace;
 overflow-y:scroll;
+position:fixed;
 `
