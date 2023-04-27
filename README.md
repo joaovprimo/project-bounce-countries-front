@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+<h1 align="center">
+    Countries-Information v1.0
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+The app "Countries-Information" is a useful tool for anyone looking to quickly and accurately obtain information about any country in the world. With just a few clicks, you can enter the desired country name and receive a wide range of information.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [x] Country search: allows users to search for information about any country in the world by typing its name.
+- [x] Country information: the app provide a wide range of information about the selected country, including:
+   - Flag
+   - Official name
+   - Common name
+   - Continent
+   - Capital
+   - Area
+   - Population
+- [x] Users have access to application by:
+   - Desktop
+   - Mobile
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Layout
 
-### `npm test`
+- Desktop
+<p align="center">
+  <img src="src/images/desktop1.png" width="400px" height="200px">
+  <img src="src/images/desktop2.png" width="400px" height="200px">
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Mobile
+<p align="center">
+  <img src="src/images/mobile1.jpeg" width="200px" height="400px">
+  <img src="src/images/mobile2.jpeg" width="200px" height="400px">
+</p>
 
-### `npm run build`
+## Link to application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div align="center">
+ <a href="https://bounce-countries.vercel.app/" target="_blank">Countries Information</a>
+ <br>
+ <img src="./src/images/qrcode_bounce-countries.vercel.app.png" width="200px" heigth="200px">
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Rodando o Back-End
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Use the git clone command followed by the URL of the repository you want to clone. 
+$ git clone git@github.com:joaovprimo/project-bounce-countries-backend.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# To install the project's dependencies, use:
+$ npm install 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# After the dependencies have been installed, you can run the application in development mode using:
+$ npm run dev
 
-## Learn More
+# You can now test and modify the project as needed.
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Rodando o Front-End
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
 
-### Code Splitting
+# Use the git clone command followed by the URL of the repository you want to clone. 
+$ git clone git@github.com:joaovprimo/project-bounce-countries-front.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# To install the project's dependencies, use: 
+$ npm install 
 
-### Analyzing the Bundle Size
+# After the dependencies have been installed, you can start the project using:
+$ npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# The application will open on the port: 3000 - go to http://localhost:3000
+```
+---
+## Tech Stacks
 
-### Making a Progressive Web App
+### Front-End (React)
+  - Axios
+  - React Loader Spinner
+  - React Router Dom
+  - Styled-Components
+  - Sweet Alert 2
+  - Deploy: Vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Server (Node.js)
+  - Axios
+  - CORS
+  - Dotenv
+  - Express
+  - Https-Status
+  - Joi
+  - Deploy: Render
+---
+## External API
+<a href="https://restcountries.com//" target="_blank">Rest Countries</a>
 
-### Advanced Configuration
+---
+## GitHub Repositories
+<a href="https://github.com/joaovprimo/project-bounce-countries-backend">Bounce-countries-backend</a>
+<br>
+<a href="https://github.com/joaovprimo/project-bounce-countries-front">Bounce-countries-frontend</a>
+---
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ <img src="./src/images/jvprimo.jpeg" width="150px" heigth="150px">
 
-### Deployment
+ <a href="tel:+353873897839" target="_blank">
+ <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
+ </a>
+ <a href="mailto:jv.primo26@gmail.com" target="_blank">
+ <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+ </a>
+<a href="https://www.linkedin.com/in/joaovprimo/" target="_blank">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+ </a>
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
