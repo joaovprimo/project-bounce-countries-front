@@ -34,15 +34,17 @@ const BoxInfo = styled.div`
         margin-right:10px;
     }
     @media (max-width: 600px){
-        min-width:50%;
+        width:90%;
         padding:15px;
+        margin-top:100px;
         h1{
             font-size:15px;
+            white-space: pre;
         }   
     }
 `;
 
-const Info = styled.h2`
+const Info = styled.div`
     color:black;
     display:flex;
     font-size:25px;
@@ -50,5 +52,6 @@ const Info = styled.h2`
     margin-bottom:5px;
     @media (max-width: 600px){
         font-size:15px;
+        
     }
 `;
